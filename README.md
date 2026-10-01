@@ -1,5 +1,7 @@
 # Sensory Substitution Kit
 
+[![CI](https://github.com/Bardmalek/sensory-substitution-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/Bardmalek/sensory-substitution-kit/actions/workflows/ci.yml)
+
 An experimental sound-to-touch system built from an ESP32 vibration controller and an Expo mobile companion. The firmware samples microphone audio, computes an FFT, groups energy into four frequency bands, and drives four vibration motors. The mobile app contains onboarding, calibration, training, and Bluetooth screens.
 
 > Prototype hardware and software. It has not been validated as an assistive or medical device.
@@ -39,5 +41,7 @@ cd mobile
 npm install
 npx expo start
 ```
+
+CI typechecks the app (`tsc --noEmit`) and lints it on every push. The firmware is built locally with PlatformIO; it is not built in CI.
 
 The BLE screen is prototype UI; hardware integration should be verified on a device with a development build.

@@ -1,5 +1,5 @@
-import { View, Text, StyleSheet, TouchableOpacity, FlatList, Animated } from 'react-native';
-import { useState, useEffect, useRef } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, Animated } from 'react-native';
+import { useState, useRef } from 'react';
 
 type Device = { id: string; name: string; rssi: number };
 
